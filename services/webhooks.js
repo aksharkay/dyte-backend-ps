@@ -69,25 +69,25 @@ module.exports = {
 				return ``;
 			}
 		},
-	},
 
-	/**
+		/**
 	 * IP Address parameter
 	 * @param {String} ipAddress
 	 */
 
-	 trigger: {
-		rest: {
-			method: "GET",
-			path: "/trigger"
+		 trigger: {
+			rest: {
+				method: "GET",
+				path: "/trigger"
+			},
+			params: {
+				name: "string"
+			},
+			/** @param {Context} ctx  */
+			async handler(ctx) {
+				return ``;
+			}
 		},
-		params: {
-			name: "string"
-		},
-		/** @param {Context} ctx  */
-		async handler(ctx) {
-			return ``;
-		}
 	},
 
 	/**
