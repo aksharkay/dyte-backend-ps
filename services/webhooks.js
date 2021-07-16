@@ -66,7 +66,7 @@ module.exports = {
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
-				return ``;
+				return "";
 			}
 		},
 
@@ -85,7 +85,7 @@ module.exports = {
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
-				return ``;
+				return "";
 			}
 		},
 	},
@@ -103,7 +103,7 @@ module.exports = {
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
-				return ``;
+				return "";
 			}
 		},
 
