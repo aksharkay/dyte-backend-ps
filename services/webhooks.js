@@ -25,18 +25,19 @@ module.exports = {
 	actions: {
 		
 		/**
-		 * Welcome, a username
+		 * Target URL parameter
 		 *
 		 * @param {String} targetUrl
 		 */
 
 		register: {
-			rest: `/${ctx.params.targetUrl}`,
+			rest: `/register/${ctx.params.targetUrl}`,
 			params: {
 				name: "string"
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
+
 				return `Unique ID:, ${Date.now()}`;
 			}
 		},
@@ -47,54 +48,64 @@ module.exports = {
 				path: "/list"
 			},
 			async handler() {
-				return "Hello Moleculer";
+				return "";
 			}
 		},
 
 		/**
-		 * Welcome, a username
+		 * ID and New Targer URL parameters
 		 *
 		 * @param {String} id
 		   @param {String} newTargetUrl
 		 */
 
 		update: {
-			rest: "/update",
+			rest: `/update/${id}`,
 			params: {
 				name: "string"
 			},
 			/** @param {Context} ctx  */
 			async handler(ctx) {
-				return `Success`;
+				return ``;
 			}
 		},
-
-		delete: {
-			rest: "/delete",
-			params: {
-				name: "string"
-			},
-			/** @param {Context} ctx  */
-			async handler(ctx) {
-				return `Welcome, ${ctx.params.name}`;
-			}
-		}
 	},
 
 	/**
+	 * IP Address parameter
 	 * @param {String} ipAddress
 	 */
 
 	 trigger: {
-		rest: '/trigger',
+		rest: {
+			method: "GET",
+			path: "/trigger"
+		},
 		params: {
 			name: "string"
 		},
 		/** @param {Context} ctx  */
 		async handler(ctx) {
-			return `Unique ID:, ${Date.now()}`;
+			return ``;
 		}
 	},
+
+	/**
+		 * ID parameter
+		 *
+		 * @param {String} id
+		 */
+
+		   update: {
+			rest: `/delete/${id}`,
+			params: {
+				name: "string"
+			},
+			/** @param {Context} ctx  */
+			async handler(ctx) {
+				return ``;
+			}
+		},
 
 	/**
 	 * Events
